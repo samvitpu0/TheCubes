@@ -1,0 +1,30 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TitleFadeIn : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        StartCoroutine("FadeIn");
+    }
+
+    /// <summary>
+    /// Coroutine to FadeIn the title
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator FadeIn()
+    {
+        var _titleCanvasGroup = GetComponent<CanvasGroup>();
+
+        // Speed by which title appears
+        float _speed = 2f;
+
+        while (_titleCanvasGroup.alpha < 1)
+        {
+            _titleCanvasGroup.alpha +=  _speed * Time.deltaTime;
+            yield return null;
+        }
+    }
+}
