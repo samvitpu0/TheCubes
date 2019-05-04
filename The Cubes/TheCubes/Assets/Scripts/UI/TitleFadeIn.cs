@@ -23,7 +23,7 @@ public class TitleFadeIn : MonoBehaviour
 
         while (_titleCanvasGroup.alpha < 1)
         {
-            _titleCanvasGroup.alpha +=  _speed * Time.deltaTime;
+            _titleCanvasGroup.alpha += Time.deltaTime / _speed;
             yield return null;
         }
     }
