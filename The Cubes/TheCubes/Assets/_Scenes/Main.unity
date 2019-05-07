@@ -320,6 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fingerTrail: {fileID: 1928741681}
+  grid: {fileID: 466182123}
 --- !u!4 &592321198
 Transform:
   m_ObjectHideFlags: 0
