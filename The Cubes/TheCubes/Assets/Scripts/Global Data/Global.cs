@@ -7,17 +7,24 @@ public class Global : MonoBehaviour
     /// <summary>
     /// Key that will be used to access the value of coins from playerr prefs
     /// </summary>
-    private const string COINS_KEY = "COINS";
+    public static string COINS_KEY = "COINS";
 
     /// <summary>
     /// Key that will be used to access the value of diamonds from playerr prefs
     /// </summary>
-    private const string DIAMONDS_KEY = "DIAMONDS";
+    public static string DIAMONDS_KEY = "DIAMONDS";
 
+    /// <summary>
+    /// Key that will be used to access the value of diamonds from playerr prefs
+    /// </summary>
+    public static string LEVEL_KEY = "LEVEL";
     
-    // Default COins and Diamonds given to the player    
+    // Default Coins and Diamonds given to the player    
     private const int DEFAULT_COINS = 100;
     private const int DEFAULT_DIAMONDS = 3;
+
+    // Initial level
+    private const int DEFAULT_LEVEL = 1;
 
     /// <summary>
     /// Value of coins with getter and setter
@@ -52,6 +59,24 @@ public class Global : MonoBehaviour
         set
         {
             PlayerPrefs.SetInt(DIAMONDS_KEY, value);
+        }
+    }
+
+    /// <summary>
+    /// Value of Level with getter and setter
+    /// getter will return the current value of Level and
+    /// setter will set new value to player prefs
+    /// </summary>
+    public static int Level
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(LEVEL_KEY, DEFAULT_LEVEL);
+        }
+
+        set
+        {
+            PlayerPrefs.SetInt(LEVEL_KEY, value);
         }
     }
 }

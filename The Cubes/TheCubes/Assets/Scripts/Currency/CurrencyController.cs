@@ -18,10 +18,12 @@ public class CurrencyController : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
 
         if (_instance == null)
+        {
+            DontDestroyOnLoad(this.gameObject);
             _instance = this;
+        }
     }
 
     public void DebitCoins (int _value)

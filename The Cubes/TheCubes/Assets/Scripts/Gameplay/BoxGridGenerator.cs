@@ -37,6 +37,7 @@ public class BoxGridGenerator : MonoBehaviour
                 for(int k = 0; k < _gridOrder; k++)
                 {
                     var _box = Instantiate(boxInstance, new Vector3(i,j,k),Quaternion.identity, gridParent) as GameObject;
+                    MainController.numberOfBlocks++;
                 }
             }
         }

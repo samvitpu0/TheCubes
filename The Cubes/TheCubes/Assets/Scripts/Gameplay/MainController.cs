@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainController : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class MainController : MonoBehaviour
     /// </summary>
     [HideInInspector]
     public static bool canDestroyBlocks = true;
+
+    /// <summary>
+    /// This will hold total number of Boxes genarated in the level
+    /// </summary>
+    [HideInInspector]
+    public static int numberOfBlocks = 0;
 
     /// <summary>
     /// Gameobject of the Trail Particle System
@@ -63,6 +70,15 @@ public class MainController : MonoBehaviour
         else
         {
             canDestroyBlocks = true;
+        }
+
+        if(numberOfBlocks <= 0)
+        {
+            Global.Level++;
+
+            //TODO For Testing
+            CurrencyController._instance.CreditCoins(10);
+            SceneManager.LoadScene("Main");
         }
     }
 }

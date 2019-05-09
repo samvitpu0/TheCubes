@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class TitleFadeIn : MonoBehaviour
 {
+    static bool titleShown = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("FadeIn");
+        if (!titleShown)
+        {
+            titleShown = true;
+            StartCoroutine("FadeIn");
+        }
     }
 
     /// <summary>

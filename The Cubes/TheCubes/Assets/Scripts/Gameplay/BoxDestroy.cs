@@ -10,4 +10,9 @@ public class BoxDestroy : MonoBehaviour
         if(MainController.canDestroyBlocks)
         Destroy(gameObject);
     }
+
+    void OnDestroy()
+    {
+        MainController.numberOfBlocks--;
+    }
 }
