@@ -104,3 +104,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c760787722f3af24785cfc5cecd2fa3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxDestroyParticles: {fileID: 3432144826931066380, guid: a64f022d534532c4594f00575ffc945c,
+    type: 3}
