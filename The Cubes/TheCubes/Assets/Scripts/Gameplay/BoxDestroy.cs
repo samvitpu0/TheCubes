@@ -13,6 +13,8 @@ public class BoxDestroy : MonoBehaviour
         if (MainController.canDestroyBlocks)
         {
             MainController.numberOfBlocks--;
+            Global.Score++;
+            MainController.UpdateScore();
             Instantiate(boxDestroyParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

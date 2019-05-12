@@ -1,10 +1,13 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainController : MonoBehaviour
 {
+    public static Action UpdateScore;
+
     /// <summary>
     /// The value will be changed to false when 2 fingers are touching the screen, if false the Grid Boxes
     /// cannot be destroyed. Set back to true when only one finger is touching the screen.

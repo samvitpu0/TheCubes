@@ -5,19 +5,24 @@ using UnityEngine;
 public class Global : MonoBehaviour
 {
     /// <summary>
-    /// Key that will be used to access the value of coins from playerr prefs
+    /// Key that will be used to access the value of coins from player prefs
     /// </summary>
     public static string COINS_KEY = "COINS";
 
     /// <summary>
-    /// Key that will be used to access the value of diamonds from playerr prefs
+    /// Key that will be used to access the value of diamonds from player prefs
     /// </summary>
     public static string DIAMONDS_KEY = "DIAMONDS";
 
     /// <summary>
-    /// Key that will be used to access the value of diamonds from playerr prefs
+    /// Key that will be used to access the value of diamonds from player prefs
     /// </summary>
     public static string LEVEL_KEY = "LEVEL";
+
+    /// <summary>
+    /// Key that will be used to access the value of score from player prefs
+    /// </summary>
+    public static string SCORE_KEY = "SCORE";
     
     // Default Coins and Diamonds given to the player    
     private const int DEFAULT_COINS = 100;
@@ -25,6 +30,9 @@ public class Global : MonoBehaviour
 
     // Initial level
     private const int DEFAULT_LEVEL = 1;
+
+    // Initial Scrore
+    private const int DEFAULT_SCORE = 0;
 
     /// <summary>
     /// Value of coins with getter and setter
@@ -77,6 +85,24 @@ public class Global : MonoBehaviour
         set
         {
             PlayerPrefs.SetInt(LEVEL_KEY, value);
+        }
+    }
+
+    /// <summary>
+    /// Value of Score with getter and setter
+    /// getter will return the current value of Score and
+    /// setter will set new value to player prefs
+    /// </summary>
+    public static int Score
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(SCORE_KEY, DEFAULT_SCORE);
+        }
+
+        set
+        {
+            PlayerPrefs.SetInt(SCORE_KEY, value);
         }
     }
 }
