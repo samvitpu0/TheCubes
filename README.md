@@ -28,13 +28,13 @@ Swipe. Shred. Repeat.
 
 ## 📲 Controls
 
-👉 Swipe on Cube	Cuts into the grid and destroys cubes
----
-✌️ Two-finger drag	Rotates the whole cube for better slicing angles
----
-💨 Finger Trail	Visual indicator of your cut path
----
-💥 Cube Destroy FX	Satisfying explosion when a cube is destroyed
+👉 Swipe on Cube:	Cuts into the grid and destroys cubes
+
+✌️ Two-finger drag:	Rotates the whole cube for better slicing angles
+
+💨 Finger Trail	Visual: indicator of your cut path
+
+💥 Cube Destroy FX:	Satisfying explosion when a cube is destroyed
 
 ---
 
